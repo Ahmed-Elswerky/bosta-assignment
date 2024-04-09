@@ -1,0 +1,76 @@
+body * {
+  font-family: "Cairo", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  color: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+header .actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #e30613;
+}
+header .actions button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: inherit;
+  font-weight: bold;
+}
+header .actions .custom-modal {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+}
+header .actions .custom-modal.shown {
+  display: block;
+}
+[lang=en] header .actions .custom-modal {
+  left: auto;
+  right: 0;
+}
+header .actions .custom-modal h5 {
+  margin-bottom: 10px;
+}
+header .actions .custom-modal form div {
+  display: flex;
+  align-items: center;
+}
+header .actions .custom-modal form div input {
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  height: 48px;
+  box-sizing: border-box;
+}
+header .actions .custom-modal form div input:focus {
+  outline: none;
+}
+header .actions .custom-modal form div button {
+  background: #e30613;
+  border-radius: 8px 0 0 8px;
+  margin-inline-start: -5px;
+  color: white;
+  height: 48px;
+  padding: 3px 15px;
+}
+[lang=en] header .actions .custom-modal form div button {
+  border-radius: 0 8px 8px 0;
+}/*# sourceMappingURL=App.css.map */

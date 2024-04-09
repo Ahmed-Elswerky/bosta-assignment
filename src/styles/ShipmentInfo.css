@@ -1,0 +1,211 @@
+.shipment-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+.shipment-info > div {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  border-radius: 8px;
+}
+.shipment-info .main-section {
+  padding: 0;
+  width: 100%;
+}
+.shipment-info .main-section .info,
+.shipment-info .main-section .progress {
+  padding: 15px 10px;
+}
+.shipment-info .main-section .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+}
+.shipment-info .main-section .info > div {
+  width: 25%;
+  text-align: center;
+}
+.shipment-info .main-section .info > div div {
+  display: inline-flex;
+  flex-direction: column;
+}
+.shipment-info .main-section .info > div span {
+  display: inline-flex;
+}
+.shipment-info .main-section .info > div span:first-child {
+  color: #b8b8b8;
+  font-size: 14px;
+}
+.shipment-info .main-section .info > div span:nth-child(2) {
+  font-weight: bold;
+}
+.shipment-info .main-section .progress {
+  border-top: 1px solid #e0e0e0;
+}
+.shipment-info .main-section .progress > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+}
+.shipment-info .main-section .progress > div span {
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+.shipment-info .main-section .progress > div span div {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: #cfcfce;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  position: relative;
+  z-index: 1;
+}
+.shipment-info .main-section .progress > div span div svg {
+  padding: 3px;
+  width: 25px;
+  height: 25px;
+}
+.shipment-info .main-section .progress > div span div.uncompleted {
+  width: auto;
+  height: auto;
+}
+[lang=ar] .shipment-info .main-section .progress > div span div.uncompleted {
+  scale: -1 1;
+}
+.shipment-info .main-section .progress > div span div.completed {
+  display: none;
+}
+.shipment-info .main-section .progress > div.points span:not(.active) .point {
+  background: #e0e0e0 !important;
+}
+.shipment-info .main-section .progress > div.points span:not(.active):after {
+  background: #e0e0e0 !important;
+}
+.shipment-info .main-section .progress > div.points span:not(:last-child):after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background: #e0e0e0;
+  translate: 0 -50%;
+  z-index: -1;
+}
+[lang=en] .shipment-info .main-section .progress > div.points span:not(:last-child):after {
+  left: 50%;
+  right: auto;
+}
+.shipment-info .main-section .progress.DELIVERED .points span:not(:last-child):after {
+  background: #35b600;
+}
+.shipment-info .main-section .progress.DELIVERED .points .point {
+  background: #35b600;
+}
+.shipment-info .main-section .progress.DELIVERED .points .point.uncompleted {
+  display: none;
+}
+.shipment-info .main-section .progress.DELIVERED .points .point.completed {
+  display: inline-flex;
+}
+.shipment-info .main-section .progress.IN_TRANSIT .points span:not(:last-child):after {
+  background: #f9ba02;
+}
+.shipment-info .main-section .progress.IN_TRANSIT .points .point {
+  background: #f9ba02;
+}
+.shipment-info .main-section .progress.DELIVERED_TO_SENDER .points span:not(:last-child):not(:nth-child(3)):after {
+  background: #f9ba02;
+}
+.shipment-info .main-section .progress.DELIVERED_TO_SENDER .points span:not(:last-child) .point {
+  background: #f9ba02;
+}
+.shipment-info .main-section .progress.CANCELLED .points span:not(:last-child):not(:nth-child(3)):after {
+  background: #e30613;
+}
+.shipment-info .main-section .progress.CANCELLED .points span:not(:last-child) .point {
+  background: #e30613;
+}
+.shipment-info .details {
+  padding: 0;
+  flex: 0.7;
+  overflow: hidden;
+  border: none;
+}
+.shipment-info .details p {
+  font-weight: bold;
+  color: #303851;
+  margin-bottom: 20px;
+}
+.shipment-info .details .table-wrapper {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  max-height: 700px;
+  overflow: auto;
+}
+.shipment-info .details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.shipment-info .details table thead {
+  background: #fafafa;
+}
+.shipment-info .details table thead th {
+  color: #adb5c6;
+  font-weight: bold;
+}
+.shipment-info .details table tr,
+.shipment-info .details table thead {
+  border-bottom: 1px solid #e0e0e0;
+}
+.shipment-info .details table td,
+.shipment-info .details table th {
+  text-align: start;
+  padding: 10px 20px;
+  vertical-align: top;
+  color: #707687;
+}
+.shipment-info p.DELIVERED,
+.shipment-info span.DELIVERED {
+  color: #35b600;
+}
+.shipment-info p.IN_TRANSIT,
+.shipment-info span.IN_TRANSIT {
+  color: #f9ba02;
+}
+.shipment-info p.DELIVERED_TO_SENDER,
+.shipment-info span.DELIVERED_TO_SENDER {
+  color: #f9ba02;
+}
+.shipment-info p.CANCELLED,
+.shipment-info span.CANCELLED {
+  color: #e30613;
+}
+.shipment-info .address {
+  flex: 0.3;
+  border: none;
+}
+.shipment-info .address p {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #303851;
+}
+.shipment-info .address div {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  color: #5d667d;
+}/*# sourceMappingURL=ShipmentInfo.css.map */
