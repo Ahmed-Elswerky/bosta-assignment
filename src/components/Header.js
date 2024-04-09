@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Context } from "views/wrapper";
 import { useIntl, FormattedMessage } from "react-intl";
 import { ReactComponent as LogoArIcon } from "assets/logo-ar.svg";
