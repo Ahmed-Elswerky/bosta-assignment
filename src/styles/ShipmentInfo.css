@@ -144,6 +144,11 @@
   overflow: hidden;
   border: none;
 }
+@media (max-width: 768px) {
+  .shipment-info .details {
+    flex: 1 auto;
+  }
+}
 .shipment-info .details p {
   font-weight: bold;
   color: #303851;
@@ -196,6 +201,11 @@
 .shipment-info .address {
   flex: 0.3;
   border: none;
+}
+@media (max-width: 768px) {
+  .shipment-info .address {
+    flex: 1 auto;
+  }
 }
 .shipment-info .address p {
   margin-bottom: 20px;
