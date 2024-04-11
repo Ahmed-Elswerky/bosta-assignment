@@ -125,6 +125,9 @@
     rotate: 90deg;
     translate: 50% calc(100% + 10px);
   }
+  [lang=en] .shipment-info .main-section .progress > div.points span:not(:last-child):after {
+    translate: -50% calc(100% + 10px);
+  }
 }
 @media (max-width: 768px) {
   .shipment-info .main-section .progress {
@@ -136,6 +139,7 @@
   }
   .shipment-info .main-section .progress > div span {
     width: 100%;
+    line-height: 1;
   }
 }
 .shipment-info .main-section .progress.DELIVERED .points span:not(:last-child):after {
