@@ -43,6 +43,18 @@
 .shipment-info .main-section .info > div span:nth-child(2) {
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .shipment-info .main-section .info {
+    flex-direction: column;
+  }
+  .shipment-info .main-section .info > div {
+    width: 100%;
+  }
+  .shipment-info .main-section .info > div * {
+    text-align: center;
+    justify-content: center;
+  }
+}
 .shipment-info .main-section .progress {
   border-top: 1px solid #e0e0e0;
 }
@@ -107,6 +119,24 @@
 [lang=en] .shipment-info .main-section .progress > div.points span:not(:last-child):after {
   left: 50%;
   right: auto;
+}
+@media (max-width: 768px) {
+  .shipment-info .main-section .progress > div.points span:not(:last-child):after {
+    rotate: 90deg;
+    translate: 50% calc(100% + 10px);
+  }
+}
+@media (max-width: 768px) {
+  .shipment-info .main-section .progress {
+    display: flex;
+  }
+  .shipment-info .main-section .progress > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .shipment-info .main-section .progress > div span {
+    width: 100%;
+  }
 }
 .shipment-info .main-section .progress.DELIVERED .points span:not(:last-child):after {
   background: #35b600;

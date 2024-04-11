@@ -45,6 +45,16 @@
           }
         }
       }
+      @media (max-width: 768px) {
+        flex-direction: column;
+        & > div {
+          width: 100%;
+          * {
+            text-align: center;
+            justify-content: center;
+          }
+        }
+      }
     }
     .progress {
       border-top: 1px solid #e0e0e0;
@@ -119,10 +129,24 @@
               left: 50%;
               right: auto;
             }
+            @media (max-width: 768px) {
+              rotate: 90deg;
+              translate: 50% calc(100% + 10px);
+            }
           }
         }
       }
+      @media (max-width: 768px) {
+        display: flex;
 
+        & > div {
+          flex-direction: column;
+          gap: 20px;
+          span {
+            width: 100%;
+          }
+        }
+      }
       &.DELIVERED {
         .points {
           span:not(:last-child):after {
